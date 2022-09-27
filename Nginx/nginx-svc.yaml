@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-cicd
+spec:
+  selector:
+    matchLabels:
+      run: nginx-cicd
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: nginx-cicd
+    spec:
+      containers:
+      - name: nginx-cicd
+        image: nginx
+        ports:
+        - containerPort: 80
