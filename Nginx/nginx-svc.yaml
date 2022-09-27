@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx-cicd
+  name: nginx-cicd-svc
 spec:
   selector:
-    app: nginx-cicd
+    app: nginx2
   ports:
-    - protocol: "TCP"
+    - protocol: TCP
       port: 80
       targetPort: 80
   type: LoadBalancer
