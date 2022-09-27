@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-cicd-deploy
+  namespace: abc
 spec:
   selector:
     matchLabels:
