@@ -14,8 +14,8 @@ spec:
         app: was0929
     spec:
       containers:
-      - name: nginx-cicd
-        image: 10.0.16.140/lemonhope97/cicd
+      - name: was-cicd
+        image: 10.0.16.140/lemonhope97/minimal:10
         ports:
         - containerPort: 80
 ---
