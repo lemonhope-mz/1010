@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: was-cicd
-        image: 10.0.16.140/lemonhope97/minimal:10
+        image: 10.0.16.140/lemonhope97/minimal:11
         ports:
         - containerPort: 80
 ---
