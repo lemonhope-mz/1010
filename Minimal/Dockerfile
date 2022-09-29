@@ -10,5 +10,5 @@ RUN apt install python3-pip -y
 RUN pip install flask
 EXPOSE 80
 EXPOSE 8080
-ENTRYPOINT [\"python3\" , \"cicd_was.py\"]
+ENTRYPOINT ["python3" , "cicd_was.py"]
 
