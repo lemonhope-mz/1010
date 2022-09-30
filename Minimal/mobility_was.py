@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return ('%s' %(str(hostname)))
 if __name__ == "__main__":
-    app.run(port=8888)
+    app.run(port=80)
 '''
 from flask import Flask
 import socket
@@ -20,5 +20,5 @@ def index():
 ​
 ​
 if __name__ == "__main__":
-        app.run(port=8080)
+        app.run(port=80)
 '''
