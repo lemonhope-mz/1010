@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: was-deploy
+  namespace: was
+spec:
+  selector:
+    matchLabels:
+      app: was0929
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: was0929
+    spec:
+      containers:
+      - name: was-cicd
+        image: 10.0.16.140/lemonhope97/minimal:17
+        ports:
+        - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: was-svc
+  namespace: was
+spec:
+  selector:
+    app: was0929
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
+
