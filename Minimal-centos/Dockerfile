@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:centos7
 RUN mkdir -p /mobilityzone
 WORKDIR /mobilityzone
 COPY . /mobilityzone
