@@ -2,6 +2,7 @@ FROM ubuntu:latest
 RUN mkdir -p /mobilityzone
 WORKDIR /mobilityzone
 COPY . /mobilityzone
+RUN Fix apt-get update “the following signatures couldn’t be verified because the public key is not available”
 ##RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 RUN apt update && apt upgrade -y 
 RUN apt install software-properties-common -y
