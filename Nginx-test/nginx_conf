@@ -1,0 +1,23 @@
+server {
+		server_name www.pjb.com ;
+		
+		listen 80	;
+		listen 443	ssl	http2	;
+		
+		set	$proxy_upstream_name	"-";
+		
+		ssl_certificate_by_lua_block	{
+					certificate.call()
+		}
+		
+		location	/	{
+					
+					set	$namespace		"default";
+					set $ingress_name	"pjb-ingress";
+					set $service_name	"pjb-svc";
+					set	$service_port	"80";
+					set	$location_path	"/";
+					set $globval_rate_limit_exceeding n;
+		}
+		
+}
