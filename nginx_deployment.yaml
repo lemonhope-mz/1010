@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: pjb-deploy
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: pjb 
+    template:
+        metadata:
+            labels:
+                app: pjb
+        spec:
+            containers:
+            - name: nginx-con
+              image: nginx 
+              ports:
+              - containerPort: 80
+              volumeMounts:
+              - name: nginx-conf
+              mountPath: /etc/nginx/conf.d
+            volumes:
+            - name: nginx-conf
+              configMap:
+                name: nginx-proxy-config
+                
