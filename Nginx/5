@@ -319,7 +319,7 @@ subjects:
 ---
 apiVersion: v1
 data:
-  allow-snippet-annotations: "true"
+  allow-snippet-annotations: "false"
 kind: ConfigMap
 metadata:
   labels:
