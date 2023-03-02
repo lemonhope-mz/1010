@@ -8,3 +8,4 @@ EXPOSE 8080
 ENTRYPOINT ["python3" , "mobility_was.py"]
 
 
+ 
